@@ -160,7 +160,10 @@ function parseInput(rplyToken, inputStr) {
 
         if (inputStr.match('召喚空鬼') != null) return Shambler(inputStr) ;
         else
-
+		
+        if (inputStr.match('猜拳') != null) return RPS(inputStr) ;
+        else
+		
 	//通用擲骰判定在此，這邊的判定比較寬鬆。
         //第一部分的 \w 代表「包括底線的任何單詞字元」，所以兩個部份的意涵就是：
         //「不是全部都是空白或中文字，而且裡面含有d的訊息」都會觸發這個判定。
@@ -793,17 +796,35 @@ function YabasoReply(inputStr) {
 	  
     return '今天同學的運勢應該是......，' + rplyArr[Dice(rplyArr.length)-1] + '吧。';
   }
- 
+
 	
-  if(inputStr.match('猜拳') != null){
-	  actions.Add(new isRock.LineBot.MessageActon()
-		      { label = "剪刀", text = "剪刀" });
-
-	  actions.Add(new isRock.LineBot.MessageActon()
-		      { label = "石頭", text = "石頭" });
-
-          actions.Add(new isRock.LineBot.MessageActon()
-		      { label = "布", text = "布" });
+	
+	
+	
+/*function RPS(inputStr){
+    type: 'template',
+    altText: 'this is a confirm template',
+    template: 
+    {
+        type: 'buttons',
+        text: '按下選單可以控制物聯網裝置！\n輸入?可以再看到這個選單！',
+        actions: [
+	{
+            type: 'postback',
+            label: '石頭',
+            data: '石頭'
+        },
+	{
+            type: 'postback',
+            label: '剪刀',
+            data: '剪刀'
+        },
+	{
+            type: 'postback',
+            label: '布',
+            data: '布'
+        }]
+    }
 	  
 	  let rplyArr = ['剪刀' , '石頭' , '布'];
 	  
@@ -862,6 +883,7 @@ function YabasoReply(inputStr) {
 	  
   }
 
+*/
 
   //沒有觸發關鍵字則是這個
   else{
