@@ -845,15 +845,17 @@ function YabasoReply(inputStr) {
   }
 */
 
-function SendImg(rplyToken, inputStr) {
-     let message = [
-  {
-	  recieve = inputStr.match('');
-    chack: [recieve],
-    img: [recieve];
-    //Pimg: ['https://i.imgur.com/FItqGSH.jpg']
-  },
-}  
+//建立ImgurClient(其中的"CLIENT_ID", "CLIENT_SECRET"要換成你自己的)
+var client = new ImgurClient(CLIENT_ID, CLIENT_SECRET);
+var endpoint = new ImageEndpoint(client);
+IImage image;
+//取得圖片檔案FileStream
+using (var fs = new FileStream(FilePath, FileMode.Open))
+{
+    image = endpoint.UploadImageStreamAsync(fs).GetAwaiter().GetResult();
+}
+//顯示圖檔位置
+Response.Write("Image uploaded. Image Url: " + image.Link);
 	     
   //沒有觸發關鍵字則是這個
   else{
