@@ -761,16 +761,16 @@ function YabasoReply(inputStr) {
     let rplyArr = inputStr.split(' ');
 
     if (rplyArr.length <= 2)
-	    return '指揮官連格式都打不好嗎，你還是去死吧';
+	    return '同學你連格式都打不好 你還是休學吧';
 
     let Answer = rplyArr[Dice(rplyArr.length)-1];
 	let temp;
-    if(Answer.match('選') != null||Answer.match('決定') != null||Answer.match('挑') != null||Answer.match('WA2000') != null) {
+    if(Answer.match('選') != null||Answer.match('決定') != null||Answer.match('挑') != null||Answer.match('主任') != null) {
    
     
     temp = rplyArr[Dice(rplyArr.length)-1];
 	    
-	    while(temp.match('WA2000') != null || temp.match('選') != null || temp.match('挑') != null || temp.match('決定') != null){
+	    while(temp.match('主任') != null || temp.match('選') != null || temp.match('挑') != null || temp.match('決定') != null){
 		    temp = rplyArr[Dice(rplyArr.length)-1];
 	    }
 	Answer = temp;    
@@ -845,6 +845,16 @@ function YabasoReply(inputStr) {
   }
 */
 
+function SendImg(rplyToken, inputStr) {
+     let message = [
+  {
+	  recieve = inputStr.match('');
+    chack: [recieve],
+    img: [recieve];
+    //Pimg: ['https://i.imgur.com/FItqGSH.jpg']
+  },
+}  
+	     
   //沒有觸發關鍵字則是這個
   else{
     let rplyArr = [];
