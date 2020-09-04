@@ -846,7 +846,7 @@ function YabasoReply(inputStr) {
 */
 
 //建立ImgurClient(其中的"CLIENT_ID", "CLIENT_SECRET"要換成你自己的)
-var client = new ImgurClient(CLIENT_ID, CLIENT_SECRET);
+var client = new ImgurClient(fdd30319757d1cf, b4ee94f79457430cd201f82f69cfd85f2aa72518);
 var endpoint = new ImageEndpoint(client);
 IImage image;
 //取得圖片檔案FileStream
