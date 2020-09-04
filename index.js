@@ -145,7 +145,7 @@ function parseInput(rplyToken, inputStr) {
 
 	//這三個是偏向玩鬧型的功能，如果說只是要擲骰可以不管。
         //鴨霸獸指令開始於此
-        if (inputStr.match('WA2000') != null) return YabasoReply(inputStr) ;
+        if (inputStr.match('主任') != null) return YabasoReply(inputStr) ;
         else
 
 	//圖片訊息在此
@@ -791,7 +791,7 @@ function YabasoReply(inputStr) {
 		 '你還是，不要知道比較好',
 		 '這應該不關我的事','這應該不關我的事','這應該不關我的事','這應該不關我的事','這應該不關我的事'];
 	  
-    return '今天指揮官的運勢應該是......，' + rplyArr[Dice(rplyArr.length)-1] + '吧。';
+    return '今天同學的運勢應該是......，' + rplyArr[Dice(rplyArr.length)-1] + '吧。';
   }
  /*  
   if(inputStr.match('猜拳') != null){
