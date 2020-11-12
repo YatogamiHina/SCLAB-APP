@@ -893,7 +893,7 @@ function YabasoReply(inputStr) {
 
 }
 
-function question(inputStr)
+/*function question(inputStr)
 {
 	
 
@@ -969,4 +969,4 @@ function question(inputStr)
     }
 
 
-}
+}*/
