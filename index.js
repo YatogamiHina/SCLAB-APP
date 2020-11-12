@@ -161,7 +161,7 @@ function parseInput(rplyToken, inputStr) {
         if (inputStr.match('召喚空鬼') != null) return Shambler(inputStr) ;
         else
 		
-        if (inputStr.match('猜拳') != null) return RPS(inputStr) ;
+        if (inputStr.match('出題') != null) return question(inputStr) ;
         else
 		
 	//通用擲骰判定在此，這邊的判定比較寬鬆。
@@ -890,5 +890,47 @@ function YabasoReply(inputStr) {
     let rplyArr = [];
     return rplyArr[Dice(rplyArr.length)-1];
   }
+
+}
+
+function question(inputStr)
+{
+
+    //以下就是LineBot選單的格式
+    var guess = {
+        type: 'template',
+        altText : 'this is a confirm template',
+        template :
+        {
+            type: 'buttons',
+            text : '按下選單可以控制物聯網裝置！\n輸入?可以再看到這個選單！',
+            actions :
+        [
+            {
+                type: 'postback',
+                label : '石頭',
+                text : '石頭'
+            },
+            {
+                type: 'postback',
+                label : '剪刀',
+                text : '剪刀'
+            },
+            {
+                type: 'postback',
+                label : '布',
+                text : '布'
+            }
+        ]
+        }
+    };
+    /*function fingerguess(inputStr) {
+        if (inputStr.match('猜拳') != null)
+            let reply = guess;
+        return reply;
+    }*/
+    
+
+
 
 }
