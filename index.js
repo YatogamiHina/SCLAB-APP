@@ -925,6 +925,7 @@ function question(inputStr)
         ]
         }
     };
+		return guess;
 	}	
     /*function fingerguess(inputStr) {
         if (inputStr.match('猜拳') != null)
