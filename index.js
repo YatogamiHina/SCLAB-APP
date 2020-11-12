@@ -897,7 +897,7 @@ function question(inputStr)
 {
 	
 
-    //以下就是LineBot選單的格式
+  /*  //以下就是LineBot選單的格式
     let guess = {
         type: 'template',
         altText : 'this is a confirm template',
@@ -934,7 +934,39 @@ function question(inputStr)
         return reply;
     }*/
     
-
+*/
+	
+	if (inputStr.message.text === '出題') {
+        return client.replyMessage(inputStr.replyToken, [
+            {
+                type: 'sticker',
+                packageId: '1',
+                stickerId: '1'
+            },
+            {
+                type: 'image',
+                originalContentUrl: 'https://developers.line.biz/media/messaging-api/messages/image-full-04fbba55.png',
+                previewImageUrl: 'https://developers.line.biz/media/messaging-api/messages/image-167efb33.png'
+            },
+            {
+                type: 'video',
+                originalContentUrl: 'https://www.sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4',
+                previewImageUrl: 'https://www.sample-videos.com/img/Sample-jpg-image-50kb.jpg'
+            },
+            {
+                type: 'audio',
+                originalContentUrl: 'https://www.sample-videos.com/audio/mp3/crowd-cheering.mp3',
+                duration: '27000'
+            },
+            {
+                type: 'location',
+                title: 'my location',
+                address: "〒150-0002 東京都渋谷区渋谷２丁目２１−１",
+                latitude: 35.65910807942215,
+                longitude: 139.70372892916203
+            }
+        ]);
+    }
 
 
 }
