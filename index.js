@@ -934,8 +934,8 @@ function YabasoReply(inputStr) {
         return reply;
     }*/
     
-*/
-	
+
+	/*
 	if (inputStr.message.text === '出題') {
         return client.replyMessage(inputStr.replyToken, [
             {
@@ -966,7 +966,7 @@ function YabasoReply(inputStr) {
                 longitude: 139.70372892916203
             }
         ]);
-    }
+    }*/
 
 
 }*/
