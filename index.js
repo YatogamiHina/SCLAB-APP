@@ -897,7 +897,7 @@ function YabasoReply(inputStr) {
 {
 	
 
-  /*  //以下就是LineBot選單的格式
+   //以下就是LineBot選單的格式
     let guess = {
         type: 'template',
         altText : 'this is a confirm template',
@@ -932,10 +932,10 @@ function YabasoReply(inputStr) {
         if (inputStr.match('猜拳') != null)
             let reply = guess;
         return reply;
-    }*/
+    }
     
 
-	/*
+	
 	if (inputStr.message.text === '出題') {
         return client.replyMessage(inputStr.replyToken, [
             {
@@ -966,7 +966,7 @@ function YabasoReply(inputStr) {
                 longitude: 139.70372892916203
             }
         ]);
-    }*/
+    }
 
 
 }*/
