@@ -895,7 +895,7 @@ function YabasoReply(inputStr) {
 
 function question(inputStr)
 {
-	if (if(inputStr.match('出題') != null)){	
+	
 
     //以下就是LineBot選單的格式
     let guess = {
@@ -925,6 +925,7 @@ function question(inputStr)
         ]
         }
     };
+	if (if(inputStr.match('出題') != null)){	
 		return guess;
 	}	
     /*function fingerguess(inputStr) {
